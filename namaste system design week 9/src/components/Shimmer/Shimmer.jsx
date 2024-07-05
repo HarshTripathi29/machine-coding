@@ -5,7 +5,7 @@ import './Shimmer.css'
 
 const Shimmer = () => {
 
-    const[memes, setMemes] = useState([]);
+    const[memes, setMemes] = useState(null);
 
     // when the page loads, useEffect calls the API for the first and only time  
     useEffect(()=>{
@@ -25,14 +25,10 @@ const Shimmer = () => {
   return (
     <div>
       <div className='outer-container'>
-        <h2>the memes are</h2>
-        <div className='inner-container'>
-        {memes && (<div className='map-container'>{memes.map((meme, index)=>(
-        <div key={index}>
-            <MemeCard key={index} data={meme}/>
-        </div> 
-        ))}</div>)}
-        </div>
+        {!memes? 
+        (<ShimmerUI/>):
+        (memes.map((meme, index)=> <MemeCard key={index} data={meme}/>))
+        }
       </div>
     </div>
   )
