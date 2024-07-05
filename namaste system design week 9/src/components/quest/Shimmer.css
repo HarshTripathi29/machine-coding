@@ -1,0 +1,52 @@
+*{
+font-family :Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.outer-container{
+    margin: 0;
+    padding: 10px;
+    width : auto;
+    display: flex;
+    flex-wrap : wrap;
+}
+
+.inner-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap : wrap;
+}
+
+.map-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-container{
+    height : 30vh;
+    width : 20vw;
+    border : 1px solid rgb(0, 0, 0);
+    border-radius : 5px;
+    margin : 10px;
+    overflow: hidden;
+    padding : 10px 5px;
+    background-color: #242424;
+    color : white;
+    font-size: 12px;
+}
+
+.card-img{
+    height : 22vh;
+    width : 20vw;
+    border : 1px solid black;
+    border-radius : 5px;
+}
+
+.shimmer-card-img{
+    height : 22vh;
+    width : 20vw;
+    border : 1px solid black;
+    border-radius : 5px;
+    background-color: aliceblue;
+}
